@@ -3,8 +3,8 @@ import os
 from flask import Flask, render_template, request, session, redirect, url_for,flash
 app = Flask(__name__)
 
-@app.route("/")
-@app.route("/hello")
+# @app.route("/")
+# @app.route("/hello")
 def home():
     return "Hello world, this is test message"
 # class API:
@@ -33,7 +33,7 @@ def home():
 #             return render_template('main.html', user=user_data)
 # api = API()
 
-# app.add_url_rule('/','home',home)
+app.add_url_rule('/','home',home)
 # app.add_url_rule('/login','login',api.login, methods=['GET','POST'])
 # app.add_url_rule('/logout','logout', api.logout, methods=['GET'])
 # app.add_url_rule('/logout','logout', api.logout, methods=['POST'])
