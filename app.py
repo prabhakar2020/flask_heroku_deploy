@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 # @app.route("/")
 # @app.route("/hello")
-# def home():
-#     return "Hello world, this is test message"
+def home():
+    return "Hello world, this is test message"
 class API:
     def hello(self, revNo=''):
         print ("*"*100)
