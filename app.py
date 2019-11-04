@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 # @app.route("/")
 # @app.route("/hello")
-def home():
-    return "Hello world, this is test message"
+# def home():
+#     return "Hello world, this is test message"
 class API:
     def hello(self, revNo=''):
         print ("*"*100)
@@ -40,6 +40,6 @@ app.add_url_rule('/logout','logout', api.logout, methods=['POST'])
 app.add_url_rule('/hello/','hello',api.hello)
 app.add_url_rule('/hello/<int:revNo>','hello',api.hello)
 if __name__ == "__main__":
-    # app.secret_key='welcome'
+    app.secret_key='welcome'
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
