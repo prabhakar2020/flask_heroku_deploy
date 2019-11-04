@@ -2,5 +2,6 @@
     "name": "Flask application deployment",
     "description": "Flask application deployment on heroku",
     "repository": "https://github.com/prabhakar2020/flask_heroku_deploy",
-    "keywords": ["prabhakar","flask","heroku","deployment"]
+    "logo": "http://xvir.github.io/img/apiai.png",
+    "keywords": ["api.ai", "natural language","robot","my robot","myrobot"]
   }
