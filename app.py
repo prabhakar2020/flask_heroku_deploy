@@ -39,4 +39,4 @@ app.add_url_rule('/','home',home)
 # app.add_url_rule('/hello/<int:revNo>','hello',api.hello)
 if __name__ == "__main__":
     app.secret_key='welcome'
-    app.run(debug=False, host='0.0.0.0', port=5000)
+    app.run()
