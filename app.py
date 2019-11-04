@@ -18,10 +18,11 @@ class API:
         session['user'] = ''
         return redirect(url_for('login'))
     def login(self):
+        error = None
         if request.method == 'GET' and session.get('user') == '':
             return render_template('login.html',error=error)
         else:
-            error = None
+            
             if request.form.get('name')=='':
                 error = 'invalid user'                
                 return render_template('login.html',error=error)
