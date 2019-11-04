@@ -2,7 +2,8 @@ from __future__ import print_function
 from flask import Flask, render_template, request, session, redirect, url_for,flash
 app = Flask(__name__)
 
-# @app.route("/hello")
+@app.route("/")
+@app.route("/hello")
 def home():
     return "Hello world, this is test message"
 # class API:
@@ -31,12 +32,12 @@ def home():
 #             return render_template('main.html', user=user_data)
 # api = API()
 
-app.add_url_rule('/','home',home)
+# app.add_url_rule('/','home',home)
 # app.add_url_rule('/login','login',api.login, methods=['GET','POST'])
 # app.add_url_rule('/logout','logout', api.logout, methods=['GET'])
 # app.add_url_rule('/logout','logout', api.logout, methods=['POST'])
 # app.add_url_rule('/hello/','hello',api.hello)
 # app.add_url_rule('/hello/<int:revNo>','hello',api.hello)
 if __name__ == "__main__":
-    app.secret_key='welcome'
+    # app.secret_key='welcome'
     app.run(host='0.0.0.0')
