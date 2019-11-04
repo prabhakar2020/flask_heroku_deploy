@@ -12,7 +12,8 @@ class API:
         print ("*"*100)
         print (revNo)
         print ("*"*100)
-        return "hello" +str(revNo), 200
+        # return "hello" +str(revNo), 200
+        return render_template("login.html", error="123")
     def logout(self):
         session['user'] = ''
         return redirect(url_for('login'))
