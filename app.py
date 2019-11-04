@@ -40,4 +40,5 @@ def home():
 # app.add_url_rule('/hello/<int:revNo>','hello',api.hello)
 if __name__ == "__main__":
     # app.secret_key='welcome'
-    app.run(host='0.0.0.0', debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
