@@ -38,7 +38,8 @@ class API:
             return render_template('main.html', user=user_data)
 api = API()
 
-app.add_url_rule('/','home',home)
+# app.add_url_rule('/','home',home)
+app.add_url_rule('/','home',api.login,methods=['GET','POST'])
 app.add_url_rule('/login','login',api.login, methods=['GET','POST'])
 app.add_url_rule('/logout','logout', api.logout, methods=['GET'])
 app.add_url_rule('/logout','logout', api.logout, methods=['POST'])
