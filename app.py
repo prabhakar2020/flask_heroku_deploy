@@ -19,7 +19,10 @@ class API:
         return redirect(url_for('login'))
     def login(self):
         error = ""
-        if request.method == 'GET' and session.get('user') == '':
+        print ("*"*20)
+        print (request.method)
+        print ("*"*20)
+        if request.method == 'GET':
             return render_template('login.html',error=error)
         else:
             
