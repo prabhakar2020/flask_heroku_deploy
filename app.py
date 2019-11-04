@@ -27,7 +27,7 @@ class API:
         else:
             
             if request.form.get('name')=='':
-                error = 'invalid user'                
+                error = 'Username must be required'
                 return render_template('login.html',error=error)
 
             user_data = session.get('user')
